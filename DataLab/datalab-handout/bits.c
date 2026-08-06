@@ -284,7 +284,11 @@ int isLessOrEqual(int x, int y)
  */
 int logicalNeg(int x)
 {
-  return 2;
+  /*
+   * x | -x 得到1111/0000，再位移
+   * 再将-1/0化为0/1
+   */
+  return (~((x | (~x + 1)) >> 31)) & 1;
 }
 /* howManyBits - return the minimum number of bits required to represent x in
  *             two's complement
@@ -300,7 +304,25 @@ int logicalNeg(int x)
  */
 int howManyBits(int x)
 {
-  return 0;
+  /*
+   * x ^ (x>>31) 把符号位变为0
+   * 再利用二分的思想，总共32位，分别check16，8...
+   */
+  int sign = x >> 31;
+  int num = x ^ sign;
+
+  int pos16 = !!(num >> 16);
+  num >>= pos16 << 4;
+  int pos8 = !!(num >> 8);
+  num >>= pos8 << 3;
+  int pos4 = !!(num >> 4);
+  num >>= pos4 << 2;
+  int pos2 = !!(num >> 2);
+  num >>= pos2 << 1;
+  int pos1 = !!(num >> 1);
+  num >>= pos1;
+
+  return (pos16 << 4) + (pos8 << 3) + (pos4 << 2) + (pos2 << 1) + pos1 + num + 1;
 }
 // float
 /*
@@ -316,6 +338,7 @@ int howManyBits(int x)
  */
 unsigned floatScale2(unsigned uf)
 {
+  
   return 2;
 }
 /*
