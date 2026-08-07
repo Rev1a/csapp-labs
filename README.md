@@ -2,7 +2,7 @@
 
 ![Language](https://img.shields.io/badge/language-C-blue)
 ![Platform](https://img.shields.io/badge/platform-WSL%20%2F%20Linux-green)
-![Progress](https://img.shields.io/badge/progress-BombLab%20In%20Progress-orange)
+![Progress](https://img.shields.io/badge/progress-BombLab%20Complete-green)
 
 > 《深入理解计算机系统》（CSAPP）课程实验的个人实现与学习记录。
 
@@ -19,7 +19,7 @@
 本仓库用于记录 CSAPP 课程配套实验的解题思路与代码实现，包含：
 
 - **DataLab**：已完成
-- **BombLab**：进行中
+- **BombLab**：已完成
 - **AttackLab**：未开始
 
 代码仅供个人学习使用。
@@ -91,5 +91,5 @@ cd AttackLab/target1
 | 实验 | 目录 | 状态 |
 | --- | --- | --- |
 | DataLab | `DataLab/datalab-handout/` | 已完成 |
-| BombLab | `BombLab/` | 进行中 |
+| BombLab | `BombLab/` | 已完成 |
 | AttackLab | `AttackLab/target1/` | 未开始 |
