@@ -1,0 +1,17 @@
+# DataLab 编译产物（由 make 生成）
+*.o
+btest
+fshow
+ishow
+driver
+
+# 实验运行输出
+*.out
+
+# Windows 下载标记文件
+*Zone.Identifier
+
+# 编辑器 / 系统临时文件
+.vscode/
+.DS_Store
+*~
