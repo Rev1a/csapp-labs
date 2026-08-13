@@ -1,0 +1,4 @@
+break getbuf
+run -q < /dev/null
+info registers rsp rdi
+quit

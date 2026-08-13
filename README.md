@@ -2,7 +2,7 @@
 
 ![Language](https://img.shields.io/badge/language-C-blue)
 ![Platform](https://img.shields.io/badge/platform-WSL%20%2F%20Linux-green)
-![Progress](https://img.shields.io/badge/progress-BombLab%20Complete-green)
+![Progress](https://img.shields.io/badge/progress-AttackLab%20Complete-green)
 
 > 《深入理解计算机系统》（CSAPP）课程实验的个人实现与学习记录。
 
@@ -11,7 +11,6 @@
 - [项目简介](#项目简介)
 - [目录结构](#目录结构)
 - [环境要求](#环境要求)
-- [快速开始](#快速开始)
 - [实验进度](#实验进度)
 
 ## 项目简介
@@ -20,7 +19,8 @@
 
 - **DataLab**：已完成
 - **BombLab**：已完成
-- **AttackLab**：未开始
+- **AttackLab**：已完成
+- **ArchLab**：未开始
 
 代码仅供个人学习使用。
 
@@ -43,6 +43,7 @@ csapp-labs/
 │   ├── bomblab.pdf          # 实验说明
 │   └── README               # 实验自带说明
 ├── AttackLab/               # AttackLab 实验
+│   ├── solution.md          # 解题记录
 │   ├── attacklab.pdf        # 实验说明
 │   └── target1/             # 目标程序
 │       ├── ctarget          # 代码注入攻击目标
@@ -50,6 +51,13 @@ csapp-labs/
 │       ├── hex2raw          # 字节串转输入工具
 │       ├── farm.c           # gadget farm 源码
 │       └── cookie.txt       # 个人 cookie
+├── ArchLab/                 # ArchLab 实验
+│   ├── archlab.pdf          # 实验说明
+│   └── archlab-handout/     # 实验材料
+│       ├── README
+│       ├── Makefile
+│       ├── sim.tar          # Y86-64 模拟器
+│       └── simguide.pdf     # 模拟器使用指南
 ├── datalab.pdf              # 实验说明（根目录副本）
 ├── README.md
 └── .gitignore
@@ -61,36 +69,11 @@ csapp-labs/
 - GCC 与 GNU Make
 - gdb、objdump（BombLab 调试用）
 
-## 快速开始
-
-### DataLab
-
-```bash
-cd DataLab/datalab-handout
-make
-./btest
-```
-
-### BombLab
-
-```bash
-cd BombLab
-./bomb              # 交互式输入
-./bomb solution.txt # 从答案文件逐行读取
-```
-
-### AttackLab
-
-```bash
-cd AttackLab/target1
-./ctarget -q        # 自学版跳过服务器；具体参数见 README.txt
-./rtarget -q
-```
-
 ## 实验进度
 
 | 实验 | 目录 | 状态 |
 | --- | --- | --- |
 | DataLab | `DataLab/datalab-handout/` | 已完成 |
 | BombLab | `BombLab/` | 已完成 |
-| AttackLab | `AttackLab/target1/` | 未开始 |
+| AttackLab | `AttackLab/target1/` | 已完成 |
+| ArchLab | `ArchLab/archlab-handout/` | 未开始 |
